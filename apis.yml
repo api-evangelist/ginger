@@ -1,7 +1,29 @@
 aid: ginger
+accessModel:
+  pricing: unknown
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Unknown
+  confidence: low
+  source: []
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/ginger.png
 name: Ginger
-description: Ginger is a company surfaced as a portfolio company of techstars and added to the API Evangelist
-  network as a stub for enrichment. This profile is a lead awaiting the enrichment pipeline.
+description: >-
+  Ginger (formerly Ginger.io) was a behavioral and emotional health company
+  offering on-demand mental health support — coaching, therapy, and psychiatry —
+  delivered through a mobile app and an employer/health-plan benefits model.
+  Surfaced in the API Evangelist network as a Techstars portfolio lead, Ginger
+  merged with Headspace in 2021 to form Headspace Health; the ginger.com domain
+  now redirects to Headspace for Organizations (organizations.headspace.com).
+  Enrichment probing on 2026-07-19 found no independent public API, developer
+  portal, OpenAPI, SDKs, or /.well-known discovery surface — every /.well-known
+  path resolves to a soft-404 Headspace marketing page. This profile is retained
+  as an acquired-company record; the only genuine machine-derivable artifact is
+  the live domain-security posture of ginger.com.
 url: https://raw.githubusercontent.com/api-evangelist/ginger/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -9,11 +31,21 @@ x-backed-by:
 - techstars
 x-tier: stub
 x-tier-reason: portfolio-lead
+x-status: acquired
+x-acquired-by: headspace
+x-successor: https://organizations.headspace.com/
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-19'
 tags:
 - Company
+- Mental Health
+- Behavioral Health
+- Healthcare
+- Wellness
+- Telehealth
+- Coaching
+- Acquired
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -21,5 +53,12 @@ maintainers:
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: DomainSecurity
+  url: security/ginger-domain-security.yml
 - type: Website
   url: https://ginger.com/
+x-enrichment:
+  date: '2026-07-19'
+  status: backfilled
+  pass: local-v1
+  note: backfilled from .gitignore signal + verified work evidence
